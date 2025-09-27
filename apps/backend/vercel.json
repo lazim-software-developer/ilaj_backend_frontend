@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "functions": {
+    "src/app.js": { "runtime": "nodejs18.x" }
+  },
   "builds": [
     {
       "src": "src/app.js",
