@@ -48,7 +48,7 @@ Brand Colors: Deep blue-green #085B86 & Vibrant orange #F59121
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 50%, hsl(var(--secondary)) 100%);
-    
+
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -92,7 +92,7 @@ Brand Colors: Deep blue-green #085B86 & Vibrant orange #F59121
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 50%, hsl(var(--secondary)) 100%);
-    
+
     /* Shadows for dark mode */
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
     --shadow-medium: 0 8px 30px -8px hsl(0 0% 0% / 0.4);
@@ -110,15 +110,15 @@ Brand Colors: Deep blue-green #085B86 & Vibrant orange #F59121
   }
 
   /* Optimized spacing for better content flow */
-  .space-y-4 > * + * {
+  .space-y-4>*+* {
     margin-top: 1rem;
   }
-  
-  .space-y-6 > * + * {
+
+  .space-y-6>*+* {
     margin-top: 1.25rem;
   }
 
-  .space-y-8 > * + * {
+  .space-y-8>*+* {
     margin-top: 1.5rem;
   }
 
@@ -143,5 +143,20 @@ Brand Colors: Deep blue-green #085B86 & Vibrant orange #F59121
   /* Table row hover effects */
   .table-row-hover:hover {
     @apply bg-muted/30 transition-colors;
+  }
+
+  /* Custom Cursor for Services Page */
+  .services-page {
+    cursor: url('./assets/anime-cursor-small.png') 24 24, auto !important;
+  }
+
+  .services-page * {
+    cursor: url('./assets/anime-cursor-small.png') 24 24, auto !important;
+  }
+
+  .services-page a:hover,
+  .services-page button:hover,
+  .services-page [role="button"]:hover {
+    cursor: url('./assets/anime-cursor-small.png') 24 24, pointer !important;
   }
 }

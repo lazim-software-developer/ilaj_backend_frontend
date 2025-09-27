@@ -22,4 +22,16 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1000, // Increase limit
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'axios'],
+          charts: ['recharts'],
+          ui: ['lucide-react', 'tailwind-merge'],
+        },
+      },
+    },
+  },
 }));
